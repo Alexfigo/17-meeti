@@ -1,0 +1,39 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m; 
+
+.meeti{
+    &__nombre {
+        color: #484349;
+        margin: 0 0 5rem;
+        text-align: center;
+    }
+
+    @include m.tablet { 
+        &__grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3,1fr);
+        }
+      }
+
+      &__informacion {
+        grid-column: 1/3;
+    }
+    
+}
+
+.sidebar{
+    &__contenido {
+        background-color: #068d9d;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    &__heading, &__texto {
+        color: #fff;
+    }
+
+    &__label {
+        font-weight: 700;
+    }
+}

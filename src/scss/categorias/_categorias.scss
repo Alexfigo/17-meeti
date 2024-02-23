@@ -1,0 +1,40 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m; 
+
+.categorias {
+    background-color: #f2f2f2;
+    padding: 5rem 0;
+
+    &__heading {
+        color: #484349;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 5rem;
+
+        @include m.tablet { 
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(2,1fr);
+          }
+
+          @include m.desktop { 
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3,1fr);
+            }
+    }
+}
+
+.categoria{
+    &__nombre {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+}

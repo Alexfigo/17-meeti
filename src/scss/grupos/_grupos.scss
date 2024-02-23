@@ -1,0 +1,33 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m; 
+
+.grupos {
+    background-image: linear-gradient(180deg,#b8336a 0,#b8336a 50%,#068d9d 0,#068d9d);
+    color: #fff;
+    padding: 5rem 0;
+
+    &__grid {
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(1,1fr);
+
+        @include m.tablet { 
+            gap: 5rem;
+            grid-template-columns: repeat(2,1fr);
+          }
+    }
+
+    &__heading {
+        font-size: 3rem;
+    }
+
+    &__texto {
+        color: #fff;
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+
+    @include m.tablet { 
+        background-image: linear-gradient(90deg,#b8336a 0,#b8336a 50%,#068d9d 0,#068d9d);
+      }
+}

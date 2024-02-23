@@ -1,0 +1,56 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m; 
+
+.busqueda {
+    background-color: #f2f2f2;
+    padding: 5rem 0;
+
+    &__heading {
+        color: #484349;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    &__campo {
+        border: 1px solid #c7c3c8;
+        margin-bottom: 2rem;
+        padding: 1rem;
+
+        @include m.tablet { 
+            margin-bottom: 0;
+          }
+    }
+
+    &__submit {
+        background-color: #b8336a;
+        border: none;
+        color: #fff;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 0;
+        padding: 1.5rem 4rem;
+        transition-duration: .3s;
+        transition-property: background-color;
+
+        @include m.tablet { 
+            width: auto;
+          }
+    }
+
+
+    @include m.tablet { 
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4,1fr);
+      }
+
+
+}

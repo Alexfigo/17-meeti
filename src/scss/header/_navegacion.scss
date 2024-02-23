@@ -1,0 +1,40 @@
+@use 'base/variables' as v; 
+@use 'base/mixins' as m; 
+
+.navegacion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__enlace {
+        align-items: center;
+        display: flex;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+
+        &--crear {
+            color: #b8336a;
+            font-weight: 700;
+
+            @include m.tablet { 
+                &:after {
+                    border-right: 2px solid #f2f2f2;
+                    content: "";
+                    display: inline-block;
+                    height: 4rem;
+                    margin: 0 0 0 2rem;
+                }
+              }
+
+        }
+        @include m.tablet { 
+            margin: 0;
+          }
+    }
+
+
+    @include m.tablet { 
+        flex-direction: row;
+        gap: 2rem;
+      }
+}
